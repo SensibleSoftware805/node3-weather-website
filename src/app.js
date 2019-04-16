@@ -66,7 +66,9 @@ app.get('/weather', (req, res) => {
         forecast(latitude, longitude, (error, {
             summary,
             temperature,
-            chanceRain
+            chanceRain,
+            humidity,
+            windSpeed
         } = {}) => {
             if (error) {
                 res.send({ error });
@@ -78,6 +80,8 @@ app.get('/weather', (req, res) => {
                 temperature,
                 chanceRain,
                 location,
+                humidity,
+                windSpeed,
                 address: req.query.address
             });
         });

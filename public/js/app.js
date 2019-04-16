@@ -22,7 +22,7 @@ weatherForm.addEventListener('submit', (e) => {
             }
 
             paraLocation.textContent = data.location;
-            paraForecast.textContent = data.summary + ' The temperature is currently ' + data.temperature + ' degress outside. There is a ' + data.chanceRain + '% chance of rain.';
+            paraForecast.textContent = data.summary + ' The temperature is currently ' + data.temperature + ' degress outside. There is a ' + data.chanceRain + '% chance of rain. The humidity is currently ' + data.humidity + '% with wind speeds at ' + data.windSpeed + 'mph.';
         });
     });
 });

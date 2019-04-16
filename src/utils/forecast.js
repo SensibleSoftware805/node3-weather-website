@@ -46,11 +46,15 @@ const forecast = (latitude, longitude, callback) => {
                 const temperature = body.currently.temperature;
                 const summary = body.daily.data[0].summary;
                 const chanceRain = body.currently.precipProbability;
+                const humidity = body.daily.data[0].humidity;
+                const windSpeed = body.daily.data[0].windSpeed;
 
                 data = {
                     temperature,
                     chanceRain,
-                    summary
+                    summary,
+                    humidity,
+                    windSpeed
                 };
             }
 
